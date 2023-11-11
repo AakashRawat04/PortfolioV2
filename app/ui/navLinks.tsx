@@ -11,7 +11,11 @@ export default function NavLinks() {
 	return (
 		<>
 			{links.map(({ name, path }) => (
-				<Link key={name} href={path} className=" font-medium text-white">
+				<Link
+					key={name}
+					href={path}
+					className=" font-medium text-white hover:text-yellow-200"
+				>
 					{name}
 				</Link>
 			))}

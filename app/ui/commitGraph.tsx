@@ -30,7 +30,7 @@ export default function CommitGraph() {
 					hideColorLegend
 					hideMonthLabels
 					labels={{
-						totalCount: "{{count}} contributions in the last half year",
+						totalCount: "{{count}} contributions in the last year",
 					}}
 				/>
 			</div>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Technologies from "./ui/technologies";
+import CommitGraph from "./ui/commitGraph";
 
 export default function Home() {
 	return (
@@ -27,7 +28,7 @@ export default function Home() {
 					height={600}
 					src="/profileImage.jpeg"
 					alt="Aakash Rawat Profile Image"
-					className="mb-10 md:mb-0 h-[120px] w-[120px] md:h-[240px] md:w-[240px] rounded-full ml-0 md:ml-10"
+					className="mb-10 md:mb-0 h-[120px] w-[120px] md:h-[240px] md:w-[240px] grayscale-0 hover:grayscale rounded-full ml-0 md:ml-10 transition duration-300"
 				/>
 			</div>
 			<div className="flex justify-center items-center my-10 md:my-16">
@@ -41,6 +42,7 @@ export default function Home() {
 					<div className="grid grid-cols-2 gap-y-5 md:grid-cols-3 md:gap-y-8 md:gap-x-4 mt-10">
 						<Technologies />
 					</div>
+					<CommitGraph />
 				</div>
 			</div>
 		</main>

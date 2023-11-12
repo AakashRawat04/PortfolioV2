@@ -12,7 +12,8 @@
     "next": "14.0.1",
     "react": "^18",
     "react-dom": "^18",
-    "react-github-calendar": "^4.0.2"
+    "react-github-calendar": "^4.0.2",
+    "sonner": "^1.2.0"
   },
   "devDependencies": {
     "typescript": "^5",

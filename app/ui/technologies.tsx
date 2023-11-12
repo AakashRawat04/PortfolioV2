@@ -6,12 +6,12 @@ const technologies = [
 		name: "Javascript",
 		image:
 			"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/480px-JavaScript-logo.png",
-		link: "/projects/js",
+		link: "/projects/javascript",
 	},
 	{
 		name: "Typescript",
 		image: "https://bestofjs.org/logos/typescript.dark.svg",
-		link: "projects/ts",
+		link: "projects/typescript",
 	},
 	{
 		name: "NextJs",

@@ -1,22 +1,20 @@
-export default function Projects() {
+import { fetchProjects } from "@/app/lib/data";
+import { Toaster } from "sonner";
+import DisplayProjects from "@/app/ui/displayProjects";
+
+export default async function Projects() {
+	const projects = await fetchProjects("aakashrawat04");
 	return (
-		<div className="flex flex-col items-center justify-center min-h-screen py-2">
-			<main className="flex flex-col items-center justify-center flex-1 px-20 text-center">
-				<h1 className="text-6xl font-bold">Projects</h1>
-				<p className="mt-3 text-2xl">Here are some of my projects:</p>
-				<div className="flex flex-col items-center justify-center flex-1 px-20 text-center">
-					<h1 className="text-6xl font-bold">Project 1</h1>
-					<p className="mt-3 text-2xl">This is project 1.</p>
+		<main>
+			<Toaster richColors />
+			<div className="flex flex-col justify-center items-center my-10 md:my-5 md:mx-auto">
+				<div className="text-white">
+					<h2 className="font-bold text-3xl">Projects</h2>
+					<div className="grid grid-cols-1 gap-y-5 md:grid-cols-2 md:gap-y-8 md:gap-x-8 mt-10">
+						<DisplayProjects projects={projects} />
+					</div>
 				</div>
-				<div className="flex flex-col items-center justify-center flex-1 px-20 text-center">
-					<h1 className="text-6xl font-bold">Project 2</h1>
-					<p className="mt-3 text-2xl">This is project 2.</p>
-				</div>
-				<div className="flex flex-col items-center justify-center flex-1 px-20 text-center">
-					<h1 className="text-6xl font-bold">Project 3</h1>
-					<p className="mt-3 text-2xl">This is project 3.</p>
-				</div>
-			</main>
-		</div>
+			</div>
+		</main>
 	);
 }

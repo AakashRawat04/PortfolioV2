@@ -4,7 +4,7 @@ export async function fetchProjectWithSkills(
 	skill: string
 ): Promise<Project[]> {
 	const url = `https://api.github.com/search/repositories?q=topic:${skill}+user:aakashrawat04&order=desc`;
-	const response = await fetch(url, { next: { revalidate: 3600 } });
+	const response = await fetch(url, { cache: "no-store" });
 	const data: {
 		items: Project[];
 	} = await response.json();
@@ -31,14 +31,14 @@ export async function fetchProjectWithSkills(
 
 export async function fetchProjects(username: string) {
 	const url = `https://api.github.com/users/${username}/repos`;
-	const response = await fetch(url, { next: { revalidate: 3600 } });
-	const data = await response.json();
+	const response = await fetch(url, { cache: "no-store" });
+	const data: Project[] = await response.json();
 
-	if (!data || !data.items || !Array.isArray(data.items)) {
+	if (!data || !Array.isArray(data)) {
 		return [];
 	}
 
-	const projects = data.items.map((project: Project) => ({
+	const projects = data.map((project: Project) => ({
 		name: project.name,
 		topics: project.topics,
 		description: project.description,

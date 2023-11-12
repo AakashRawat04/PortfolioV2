@@ -6,50 +6,50 @@ const technologies = [
 		name: "Javascript",
 		image:
 			"https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/480px-JavaScript-logo.png",
-		link: "https://www.google.com",
+		link: "/projects/js",
 	},
 	{
 		name: "Typescript",
 		image: "https://bestofjs.org/logos/typescript.dark.svg",
-		link: "https://www.google.com",
+		link: "projects/ts",
 	},
 	{
 		name: "NextJs",
 		image: "https://bestofjs.org/logos/nextjs.dark.svg",
-		link: "https://www.google.com",
+		link: "projects/nextjs",
 	},
 	{
 		name: "NodeJs",
 		image: "https://bestofjs.org/logos/nodejs.dark.svg",
-		link: "https://www.google.com",
+		link: "projects/nodejs",
 	},
 	{
 		name: "Prisma",
 		image: "https://bestofjs.org/logos/prisma.dark.svg",
-		link: "https://www.google.com",
+		link: "projects/prisma",
 	},
 	{
 		name: "GoLang",
 		image:
 			"https://geekole.com/wp-content/uploads/2022/12/golang_logo_gopher_geekole.png",
-		link: "https://www.google.com",
+		link: "projects/golang",
 	},
 	{
 		name: "TailwindCSS",
 		image:
 			"https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
-		link: "https://www.google.com",
+		link: "projects/tailwindcss",
 	},
 	{
 		name: "tRPC",
 		image: "https://bestofjs.org/logos/trpc.dark.svg",
-		link: "https://www.google.com",
+		link: "projects/trpc",
 	},
 	{
 		name: "AWS",
 		image:
 			"https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/Amazon_Web_Services_Logo.svg/768px-Amazon_Web_Services_Logo.svg.png",
-		link: "https://www.google.com",
+		link: "projects/aws",
 	},
 ];
 

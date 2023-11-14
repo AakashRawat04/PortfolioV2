@@ -4,7 +4,7 @@ export async function fetchProjectWithSkills(
 	skill: string
 ): Promise<Project[]> {
 	const url = `https://api.github.com/search/repositories?q=topic:${skill}+user:aakashrawat04&order=desc`;
-	const response = await fetch(url, { cache: "no-store" });
+	const response = await fetch(url, { next: { revalidate: 3600 } });
 	const data: {
 		items: Project[];
 	} = await response.json();
@@ -31,7 +31,7 @@ export async function fetchProjectWithSkills(
 
 export async function fetchProjects(username: string) {
 	const url = `https://api.github.com/users/${username}/repos`;
-	const response = await fetch(url, { cache: "no-store" });
+	const response = await fetch(url, { next: { revalidate: 3600 } });
 	const data: Project[] = await response.json();
 
 	if (!data || !Array.isArray(data)) {

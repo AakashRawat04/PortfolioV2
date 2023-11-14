@@ -22,12 +22,32 @@ const experiences = [
 		title: "Freelance Project",
 		company: "Social Media Backend API",
 		link: "",
-		duration: "2021 - Present",
+		duration: "June 2023",
 		description: [
 			`Worked on the Typescript Base Backend API of a social media application with
     ExpressJS.`,
 			"Used Supabase as the Database.",
 			`Technologies worked on: Typescript, Supabase, ExpressJS.`,
+		],
+	},
+	{
+		title: "Member",
+		company: "NextTechLab",
+		link: "",
+		duration: "June 2023 - Present",
+		description: [
+			"started off as an associate later got promoted as a member.",
+		],
+	},
+	{
+		title: "Associate Lead",
+		company: "SRMKZILLA",
+		link: "https://www.srmkzilla.net/",
+		duration: "October 2022 - Present",
+		description: [
+			`Started off as a member and later got promoted as an associate lead.`,
+			"Worked on KZCMS backend.",
+			`Facilitated several internal sessions to educate team members.`,
 		],
 	},
 ];
@@ -47,6 +67,7 @@ export default function ExperiencesList() {
 					</div>
 					<p className="text-sm text-gray-400">
 						<Link
+							target="_blank"
 							href={experience.link}
 							onClick={(e) => {
 								if (!experience.link) {

@@ -1,5 +1,9 @@
 import { Project } from "./definitions";
 
+function parseISODate(isoDateString: string): Date {
+	return new Date(isoDateString);
+}
+
 export async function fetchProjectWithSkills(
 	skill: string
 ): Promise<Project[]> {
@@ -24,9 +28,18 @@ export async function fetchProjectWithSkills(
 			description: project.description,
 			html_url: project.html_url,
 			homepage: project.homepage,
+			created_at: project.created_at,
 		}));
 
-	return filteredProjects;
+	// return filteredProjects;
+	const sortedProjects = filteredProjects.sort((a, b) => {
+		return (
+			parseISODate(b.created_at).getTime() -
+			parseISODate(a.created_at).getTime()
+		);
+	});
+
+	return sortedProjects;
 }
 
 export async function fetchProjects(username: string) {
@@ -44,7 +57,16 @@ export async function fetchProjects(username: string) {
 		description: project.description,
 		html_url: project.html_url,
 		homepage: project.homepage,
+		created_at: project.created_at,
 	}));
 
-	return projects;
+	// return projects;
+	const sortedProjects = projects.sort((a, b) => {
+		return (
+			parseISODate(b.created_at).getTime() -
+			parseISODate(a.created_at).getTime()
+		);
+	});
+
+	return sortedProjects;
 }

@@ -6,7 +6,7 @@ export default function CommitGraph() {
 	const selectLastHalfYear = (contributions: any[]) => {
 		const currentYear = new Date().getFullYear();
 		const currentMonth = new Date().getMonth();
-		const shownMonths = 12;
+		const shownMonths = 6;
 
 		return contributions.filter((activity) => {
 			const date = new Date(activity.date);
@@ -21,16 +21,15 @@ export default function CommitGraph() {
 	};
 
 	return (
-		<div className="mt-10">
+		<div className="mt-10" style={{ overflowX: "hidden" }}>
 			<h2 className="text-3xl font-bold">Recent Activities</h2>
 			<div className="mt-5">
 				<GitHubCalendar
 					username="aakashrawat04"
-					transformData={selectLastHalfYear}
 					hideColorLegend
 					hideMonthLabels
 					labels={{
-						totalCount: "{{count}} contributions in the last year",
+						totalCount: "{{count}} commits in the last year",
 					}}
 				/>
 			</div>

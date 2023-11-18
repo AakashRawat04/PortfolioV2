@@ -4,7 +4,7 @@ import CommitGraph from "./ui/commitGraph";
 
 export default function Home() {
 	return (
-		<main>
+		<main className="">
 			<div className="flex flex-col-reverse md:flex-row justify-center items-center">
 				<div className="text-white w-[350px] md:w-[450px]">
 					<h1 className="font-bold text-3xl md:text-5xl mb-1 text-transparent bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% bg-clip-text">

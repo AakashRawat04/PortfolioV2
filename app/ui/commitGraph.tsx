@@ -3,10 +3,10 @@
 import GitHubCalendar from "react-github-calendar";
 
 export default function CommitGraph() {
-	const selectLastHalfYear = (contributions: any[]) => {
+	const selectLastYear = (contributions: any[]) => {
 		const currentYear = new Date().getFullYear();
 		const currentMonth = new Date().getMonth();
-		const shownMonths = 6;
+		const shownMonths = 12;
 
 		return contributions.filter((activity) => {
 			const date = new Date(activity.date);
@@ -21,10 +21,12 @@ export default function CommitGraph() {
 	};
 
 	return (
-		<div className="mt-10" style={{ overflowX: "hidden" }}>
+		<div className="mt-10">
 			<h2 className="text-3xl font-bold">Recent Activities</h2>
 			<div className="mt-5">
 				<GitHubCalendar
+					transformData={selectLastYear}
+					colorScheme="dark"
 					username="aakashrawat04"
 					hideColorLegend
 					hideMonthLabels

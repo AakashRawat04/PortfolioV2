@@ -4,7 +4,7 @@ import { toast } from "sonner";
 
 export default function ResumeButton() {
 	const url =
-		"https://drive.google.com/file/d/1gGEsRIq0OoFrtAYSePbyR2r7ZII7F0zq/view?usp=sharing";
+		"https://drive.google.com/file/d/1F-LnJgWPgXy9Pf4109r-RhI3bs8FLqBS/view?usp=sharing";
 	return (
 		<div className="mt-3">
 			<Link

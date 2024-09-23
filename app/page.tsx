@@ -1,6 +1,6 @@
 import Image from "next/image";
-import Technologies from "./ui/technologies";
 import CommitGraph from "./ui/commitGraph";
+import Technologies from "./ui/technologies";
 
 export default function Home() {
 	return (
@@ -15,7 +15,7 @@ export default function Home() {
 						journey!
 					</p>
 					<p className="mt-4 text-left font-light text-zinc-400">
-						Hello, I&apos;m Aakash Rawat, a second-year student at SRM Institute
+						Hello, I&apos;m Aakash Rawat, a third-year student at SRM Institute
 						of Science and Technology, Chennai. I&apos;m a passionate full-stack
 						developer with a love for exploring cutting-edge technologies. My
 						journey involves crafting solutions, building applications, and

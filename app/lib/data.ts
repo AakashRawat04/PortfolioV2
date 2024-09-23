@@ -44,7 +44,7 @@ export async function fetchProjectWithSkills(
 
 export async function fetchProjects(username: string) {
 	const url = `https://api.github.com/users/${username}/repos`;
-	const response = await fetch(url, { next: { revalidate: 3600 } });
+	const response = await fetch(url, { next: { revalidate: 120 } });
 	const data: Project[] = await response.json();
 
 	if (!data || !Array.isArray(data)) {
